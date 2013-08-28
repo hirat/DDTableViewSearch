@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'DDTableViewSearch' target in the 'DDTableViewSearch' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #ifdef __NO_LOG__
+    #define MYLog(format, ...)
+    #else
+    //#define MYLog(format, ...) NSLog(format, ## __VA_ARGS__)
+    #define MYLog(format, ...) NSLog((@"%s [Line %d]" format),  __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__)
+    #endif
+
+    #define MR_SHORTHAND
+    #import "CoreData+MagicalRecord.h"
+
+    #import "CoreDataTableViewController.h"
+
+    #import "NSDate+Helper.h"
+
+    #import "IMMessage.h"
+    #import "IMMessage+Helper.h"
+    #import "IMFriend.h"
+    #import "IMFriend+Helper.h"
+#endif

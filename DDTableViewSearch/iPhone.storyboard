@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wGP-fy-G3d">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller - Test-->
+        <scene sceneID="5bI-c5-qNC">
+            <objects>
+                <tableViewController storyboardIdentifier="DDTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IAM-40-NtD" customClass="DDTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mj4-TN-K6S">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="bd8-Mt-zXi">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="IAM-40-NtD" id="rty-U2-r8W"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DDTableViewCell" id="Q9s-hU-e13">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Test" id="Acx-5a-yUy"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="VT5-8z-p1D" id="lrH-ZR-0Yh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rV-VP-Vmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="VT5-8z-p1D">
+                    <connections>
+                        <outlet property="delegate" destination="IAM-40-NtD" id="Yyb-hD-FE3"/>
+                        <outlet property="searchBar" destination="bd8-Mt-zXi" id="Jh3-Rb-aac"/>
+                        <outlet property="searchContentsController" destination="IAM-40-NtD" id="aqC-8r-Ozy"/>
+                        <outlet property="searchResultsDataSource" destination="IAM-40-NtD" id="xzY-mJ-O0y"/>
+                        <outlet property="searchResultsDelegate" destination="IAM-40-NtD" id="a9N-Nj-HHR"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="599" y="11"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UtY-cv-XI3">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="wGP-fy-G3d" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qms-3A-UBK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IAM-40-NtD" kind="relationship" relationship="rootViewController" id="iPG-87-Eiv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VMm-zs-EZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="11"/>
+        </scene>
+        <!--Table Detail View Controller-->
+        <scene sceneID="cYk-wu-yh0">
+            <objects>
+                <tableViewController storyboardIdentifier="DDTableDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a8N-NT-EbI" customClass="DDTableDetailViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fWn-33-EOV">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="Dtp-Cr-wm4">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="a8N-NT-EbI" id="4ab-Vn-Qwq"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DDTableDetailViewCell" id="UGR-Kw-aWS">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a8N-NT-EbI" id="w4r-Zq-r9L"/>
+                            <outlet property="delegate" destination="a8N-NT-EbI" id="iJj-Ii-Jtx"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5Ur-LJ-C9B"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="FVx-ip-gsb" id="ui1-wU-i8Y"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXQ-B4-5aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="FVx-ip-gsb">
+                    <connections>
+                        <outlet property="delegate" destination="a8N-NT-EbI" id="br0-X4-cNW"/>
+                        <outlet property="searchBar" destination="Dtp-Cr-wm4" id="cj0-aL-PCz"/>
+                        <outlet property="searchContentsController" destination="a8N-NT-EbI" id="E7A-Gd-uqK"/>
+                        <outlet property="searchResultsDataSource" destination="a8N-NT-EbI" id="tsi-Bk-00w"/>
+                        <outlet property="searchResultsDelegate" destination="a8N-NT-EbI" id="Nqf-8z-gOe"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="993" y="11"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
